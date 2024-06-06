@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Inteligência Artificial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Quizzes</h1>
+        <p>Nome Usuário</p>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-search"></i> Explorar</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> Biblioteca</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> Relatórios</a></li>
+                <li><a href="#"><i class="fas fa-user"></i> Perfil</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="quiz-header">
+            <h1>Quiz: Inteligência Artificial</h1>
+        </div>
+        <div class="quiz-content" id="quiz-content">
+            <div class="quiz-image-container">
+                <img src="img/iaex.jpg" width="500px" height="500px" alt="Inteligência Artificial">
+            </div>
+            <p>Bem-vindo ao quiz sobre Inteligência Artificial! Este quiz foi criado para testar seus conhecimentos sobre IA, explorar tópicos interessantes e desafiá-lo com perguntas variadas. Vamos ver como você se sai neste campo fascinante.</p>
+            <div class="quiz-details">
+                <h2>O que você encontrará neste quiz:</h2>
+                <ul>
+                    <li>Perguntas sobre história da IA</li>
+                    <li>Conceitos fundamentais e algoritmos</li>
+                    <li>Aplicações práticas de IA no mundo real</li>
+                    <li>Desafios éticos e futuros da IA</li>
+                </ul>
+                <div class="quiz-image-container">
+                    
+                </div>
+            </div>
+            <button onclick="startQuiz()">Iniciar Quiz</button>
+        </div>
+        <div class="quiz-question" id="quiz-question" style="display: none;">
+            <h2>Pergunta 1: Quem é considerado o pai da inteligência artificial?</h2>
+            <ul>
+                <li onclick="checkAnswer(this, 'wrong')">A) Isaac Newton</li>
+                <li onclick="checkAnswer(this, 'wrong')">B) Albert Einstein</li>
+                <li onclick="checkAnswer(this, 'correct')">C) Alan Turing</li>
+                <li onclick="checkAnswer(this, 'wrong')">D) Nikola Tesla</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function startQuiz() {
+            document.getElementById('quiz-content').style.display = 'none';
+            document.getElementById('quiz-question').style.display = 'block';
+        }
+
+        function checkAnswer(element, answer) {
+            if (answer === 'correct') {
+                element.style.backgroundColor = 'green';
+            } else {
+                element.style.backgroundColor = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
